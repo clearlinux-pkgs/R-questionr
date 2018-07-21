@@ -4,21 +4,12 @@
 #
 Name     : R-questionr
 Version  : 0.6.3
-Release  : 11
+Release  : 12
 URL      : https://cran.r-project.org/src/contrib/questionr_0.6.3.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/questionr_0.6.3.tar.gz
 Summary  : Functions to Make Surveys Processing Easier
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-Hmisc
-Requires: R-classInt
-Requires: R-htmltools
-Requires: R-janitor
-Requires: R-labelled
-Requires: R-miniUI
-Requires: R-rstudioapi
-Requires: R-shiny
-Requires: R-tidyr
 BuildRequires : R-Hmisc
 BuildRequires : R-classInt
 BuildRequires : R-htmltools
@@ -41,11 +32,11 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1531886107
+export SOURCE_DATE_EPOCH=1532216489
 
 %install
 rm -rf %{buildroot}
-export SOURCE_DATE_EPOCH=1531886107
+export SOURCE_DATE_EPOCH=1532216489
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
 export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
