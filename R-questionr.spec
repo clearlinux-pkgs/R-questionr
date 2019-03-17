@@ -4,21 +4,12 @@
 #
 Name     : R-questionr
 Version  : 0.7.0
-Release  : 16
+Release  : 17
 URL      : https://cran.r-project.org/src/contrib/questionr_0.7.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/questionr_0.7.0.tar.gz
 Summary  : Functions to Make Surveys Processing Easier
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-Hmisc
-Requires: R-classInt
-Requires: R-htmltools
-Requires: R-janitor
-Requires: R-labelled
-Requires: R-miniUI
-Requires: R-rstudioapi
-Requires: R-shiny
-Requires: R-tidyr
 BuildRequires : R-Hmisc
 BuildRequires : R-classInt
 BuildRequires : R-htmltools
@@ -41,10 +32,10 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1543323204
+export SOURCE_DATE_EPOCH=1552864735
 
 %install
-export SOURCE_DATE_EPOCH=1543323204
+export SOURCE_DATE_EPOCH=1552864735
 rm -rf %{buildroot}
 export LANG=C
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
@@ -80,8 +71,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export _R_CHECK_FORCE_SUGGESTS_=false
-R CMD check --no-manual --no-examples --no-codoc -l %{buildroot}/usr/lib64/R/library questionr|| : 
-cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
+R CMD check --no-manual --no-examples --no-codoc  questionr || :
 
 
 %files
@@ -125,3 +115,6 @@ cp ~/.stash/* %{buildroot}/usr/lib64/R/library/*/libs/ || :
 /usr/lib64/R/library/questionr/shiny/css/ifuncs.css
 /usr/lib64/R/library/questionr/shiny/js/iorder.js
 /usr/lib64/R/library/questionr/shiny/js/jquery-ui.js
+/usr/lib64/R/library/questionr/tests/testthat.R
+/usr/lib64/R/library/questionr/tests/testthat/test_multi.R
+/usr/lib64/R/library/questionr/tests/testthat/test_tables.R
