@@ -4,13 +4,12 @@
 #
 Name     : R-questionr
 Version  : 0.7.0
-Release  : 30
+Release  : 31
 URL      : https://cran.r-project.org/src/contrib/questionr_0.7.0.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/questionr_0.7.0.tar.gz
 Summary  : Functions to Make Surveys Processing Easier
 Group    : Development/Tools
 License  : GPL-2.0+
-Requires: R-Hmisc
 Requires: R-classInt
 Requires: R-highr
 Requires: R-htmltools
@@ -20,7 +19,6 @@ Requires: R-miniUI
 Requires: R-rstudioapi
 Requires: R-shiny
 Requires: R-tidyr
-BuildRequires : R-Hmisc
 BuildRequires : R-classInt
 BuildRequires : R-highr
 BuildRequires : R-htmltools
@@ -37,21 +35,22 @@ No detailed description available
 
 %prep
 %setup -q -c -n questionr
+cd %{_builddir}/questionr
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1562207566
+export SOURCE_DATE_EPOCH=1589782873
 
 %install
-export SOURCE_DATE_EPOCH=1562207566
+export SOURCE_DATE_EPOCH=1589782873
 rm -rf %{buildroot}
 export LANG=C.UTF-8
 export CFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FCFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
-export FFLAGS="$CFLAGS -O3 -flto -fno-semantic-interposition "
+export FCFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
+export FFLAGS="$FFLAGS -O3 -flto -fno-semantic-interposition "
 export CXXFLAGS="$CXXFLAGS -O3 -flto -fno-semantic-interposition "
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
