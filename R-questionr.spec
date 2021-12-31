@@ -4,7 +4,7 @@
 #
 Name     : R-questionr
 Version  : 0.7.5
-Release  : 47
+Release  : 48
 URL      : https://cran.r-project.org/src/contrib/questionr_0.7.5.tar.gz
 Source0  : https://cran.r-project.org/src/contrib/questionr_0.7.5.tar.gz
 Summary  : Functions to Make Surveys Processing Easier
